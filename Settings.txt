@@ -1,6 +1,15 @@
-DisplaySize = 42.2
+; Your display size in inches. Needed only when BAM-Tracker is not running.
+; Note: (.) is decimal separator, so 13.3 is ok, but 13,3 is wrong. 
+DisplaySize = 40.0
+
+; Your display native resolution. Needed only when BAM-Tracker is not running.
 NativeResWidth = 1920
 NativeResHeight = 1080
-Rotation = 4
+
+; Rotation: 0 - none, 1 - 90, 2 - 180, 3 - 270 deg. You probably left it = 0
+Rotation = 0
+
+; Static Camera/Player position in relation to center of screen in millimeters (Z - above screen, Y - alongside screen).
+; If you look at screen from point above screen edge StaticCamPosY = half of screen height.
 StaticCamPosY = -500
 StaticCamPosZ = 800

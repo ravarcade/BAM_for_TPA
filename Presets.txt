@@ -1,3 +1,6 @@
+; Few Presets. You may add more. 
+; Values here are used to put in-game virtual pinball in desired position to real world screen
+
 ; Arabian Nights : Glass
 Angle = 9.055
 Length = 6100

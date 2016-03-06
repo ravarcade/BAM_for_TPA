@@ -5,7 +5,7 @@
 
 #include <Windows.h>
 
-#define HOOK_DLL "PinballVRcade.dll"
+#define HOOK_DLL "BAM_for_TPA.dll"
 
 int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
@@ -42,7 +42,7 @@ int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
     if (!success)
     {
         MessageBoxA(NULL, "Locate PinballArcade.exe on your local system and drag it onto the launcher.", "Couldn't locate Pinball Arcade.", MB_ICONERROR | MB_OK);
-        return 0;
+        return S_OK;
     }
 
     GetFullPathNameA(exe_path, sizeof(exe_dir), exe_dir, &file_part);
@@ -57,7 +57,7 @@ int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
         if (appid_file == INVALID_HANDLE_VALUE)
         {
             MessageBoxA(NULL, "Try running this launcher as an administrator.", "Couldn't set up Pinball Arcade app id file.", MB_ICONERROR | MB_OK);
-            return 0;
+            return S_OK;
         }
         WriteFile(appid_file, "238260", 6, NULL, NULL);
         FlushFileBuffers(appid_file);
@@ -82,7 +82,7 @@ int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
     if (!success)
     {
         MessageBoxA(NULL, "An error occurred trying to launch Pinball Arcade from the specified path.", "Failed to launch Pinball Arcade.", MB_ICONERROR | MB_OK);
-        return;
+        return S_OK;
     }
     
     // Get the local path to our launcher
@@ -113,5 +113,5 @@ int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
     CloseHandle(hook_init_thread);
 
     ResumeThread(process_info.hThread);
-    return 0;
+    return S_OK;
 }
