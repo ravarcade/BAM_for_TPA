@@ -1,0 +1,6 @@
+DisplaySize = 42.2
+NativeResWidth = 1920
+NativeResHeight = 1080
+Rotation = 4
+StaticCamPosY = -500
+StaticCamPosZ = 800

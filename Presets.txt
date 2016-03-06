@@ -1,0 +1,17 @@
+; Arabian Nights : Glass
+Angle = 9.055
+Length = 6100
+ZLevel = 1771.25
+YTranslation = 0
+
+; Arabian Nights : Playfield
+Angle = 3.997
+Length = 6600.000
+ZLevel = 1078.65
+YTranslation = 520.000
+
+; Arabian Nights : with DMD
+Angle = 24.055
+Length = 6200.000
+ZLevel = 1931.250
+YTranslation = 1090.000

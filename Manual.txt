@@ -1,0 +1,56 @@
+How to run BAM with TPA.
+1. You need Future Pinball running with BAM with any head tracking method working. 
+2. Exit FP and run BAM-Tracker.exe (from BAM dir).
+3. Select head tracking method (on this video: Kinect 2)
+4. Run Launcher.exe to load TPA in DX9. Play.
+Next time you don't need to run FP and select head tracking method.
+
+DX11 is not supported.
+Without BAM-Tracker (and whole FP/BAM stuffs) BAM_for_TPA will work in Static Cam mode. 
+You will be able to setup table possition and camera/viewer position almost same way as in FP/BAM.
+
+---------------------------------------
+Manual for BAM in TPA.
+There is no menu on screen. You need to remember all keyboard keys.
+Full list of keys:
+F11 - Next preset
+F10 - Prev preset
+F9 - Turn on/off head tracking
+
+F8 - Setup-mode On. Flying camera. (It helps to setup table).
+F7 - Setup-mode On. Normal camera (head tracking or static)
+F6 - Setup-mode Off. Arrow keys not active.
+
+F5 - Save current preset to "CurrentPreset.txt" 
+F4 - Restore preset. (Remove all changes)
+
+F3 - Step = Step / 10; (decress step for every tuned params)
+F2 - Step = 1; (reset step to default value)
+F1 - Step = Step * 10; (increass step for every tuned params)
+
+In Setup-mode (After F7 or F8):
+Arrows Left/Right : Table Angle
+Arrows Up/Down: Move table up/down.
+PageUp/PageDown: Move table forward/backward
+Home/End: Scale table (make bigger/smaller)
+
+So you have 4 params to tune, used to set in-game virtual table in relation to screen.
+That for values i call "preset".
+In file "Presets.txt" you may find 3 sets of that values. You may add more or modify it.
+
+When you press F5 "CurrentPreset.txt" is created. You may copy values from here to "Preset.txt".
+
+When Setup-mode is disabled (after F6, F9, F10, F11) and when head tracking is disabled, camera is paced in user defined position.
+You may change that position with PageUp/PageDown & Home/End keys.
+
+There is file "Settings.txt" with static camera position. You may change it.
+
+------------------------------------------
+
+What if you don't have FP/BAM running?
+You may use "static camera". (no head tracking).
+In that case first look at "Settings.txt". Here you need to enter: your display size and native resolution. If you use BAM/FP headtracking that information is taken from FP/BAM setup.
+
+-------------------------------------------
+Executable / Files to download are on my site:
+http://www.ravarcade.pl
