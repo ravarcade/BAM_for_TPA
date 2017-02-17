@@ -89,6 +89,7 @@ void CreateProjectionAndViewMatrix(float *P, float *V, int resolutionWidth, int 
 
 		double w = DisplayNativeWidth, h = DisplayNativeHeight;
 		DisplaySize = (float)(sqrt(w*w + h*h) / 25.4); // [mm] -> [inchs]
+		CamMode = HEAD_TRACKING;
 	}
 	else { // or if there is no BAM Tracker use Settings
 		DisplayNativeWidth = (float)Settings.NativeResWidth;

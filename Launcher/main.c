@@ -26,7 +26,14 @@ int CALLBACK WinMain (HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdL
     success = 0;
     if (*lpCmdLine)
     {
-        strcpy(exe_path, lpCmdLine);
+		if (*lpCmdLine == '\"')
+		{
+			strcpy(exe_path, lpCmdLine+1);
+			exe_path[strlen(exe_path) - 1] = 0;
+		}
+		else {
+			strcpy(exe_path, lpCmdLine);
+		}
         success = GetFileAttributesA(exe_path) != INVALID_FILE_ATTRIBUTES;
     }
     if (!success)
